@@ -1,9 +1,34 @@
 import React from 'react'
-
-const index = () => {
+import {Nav, NavbarContainer, NavLogo, NavItem, MobileIcon, NavMenu, NavLinks, NavBtn, NavBtnLink} from './NavbarStyles'
+import { FaBars } from 'react-icons/fa'
+const Navbar = () => {
   return (
-    <div>index</div>
-  )
-}
+    <Nav>
+      <NavbarContainer>
+        <NavLogo to='/'>dolla</NavLogo>
+        <MobileIcon>
+          <FaBars />
+        </MobileIcon>
+        <NavMenu>
+          <NavItem>
+            <NavLinks to='about'>About</NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks to='discover'>Discover</NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks to='services'>Services</NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks to='signup'>Signup</NavLinks>
+          </NavItem>
+        </NavMenu>
+        <NavBtn>
+          <NavBtnLink to="/signin"> Sign In</NavBtnLink>
+        </NavBtn>
+      </NavbarContainer>
+    </Nav>
+  );
+};
 
-export default index
+export default Navbar;
